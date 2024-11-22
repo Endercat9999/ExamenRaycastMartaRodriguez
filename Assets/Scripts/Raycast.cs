@@ -21,19 +21,82 @@ public class Raycast : MonoBehaviour
             {
               if(hit.transform.tag == "cubo 1")
                     {
-                        SceneManager.LoadScene("Scene1 1");
+                        StartCoroutine(CuentaAtras());
                     }
                     else if(hit.transform.tag == "cubo 2")
                     {
-                        SceneManager.LoadScene("Scene1 2");
+                        StartCoroutine(CuentaAtras2());   
                     }
                     else if(hit.transform.tag == "esfera")
                     {
-                        SceneManager.LoadScene("Scene1 3");
+                        StartCoroutine(CuentaAtras3()); 
                     }
 
                     Debug.Log(hit.transform.name);
             }
         }
+
+    IEnumerator CuentaAtras()
+        {
+            cuentaAtrasTextos.text = "5";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "4";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "3";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "2";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "1";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "0";
+            yield return new WaitForSeconds(1);
+
+            SceneManager.LoadScene("Scene1 1");
+
+        }
+
+    IEnumerator CuentaAtras2()
+        {
+            cuentaAtrasTextos.text = "5";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "4";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "3";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "2";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "1";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "0";
+            yield return new WaitForSeconds(1);
+
+            SceneManager.LoadScene("Scene1 2");
+
+        }
+
+    IEnumerator CuentaAtras3()
+        {
+            cuentaAtrasTextos.text = "5";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "4";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "3";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "2";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "1";
+            yield return new WaitForSeconds(1);
+            cuentaAtrasTextos.text = "0";
+            yield return new WaitForSeconds(1);
+
+            SceneManager.LoadScene("Scene1 3");
+
+        }
+
     }
+
+
+
+
+
 }
